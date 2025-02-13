@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Exam_Tickets_Lorensius Bernard Gani.props" />
+</Project>

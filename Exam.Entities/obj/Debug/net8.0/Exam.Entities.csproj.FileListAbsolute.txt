@@ -1,0 +1,14 @@
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\bin\Debug\net8.0\Exam.Entities.deps.json
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\bin\Debug\net8.0\Exam.Entities.runtimeconfig.json
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\bin\Debug\net8.0\Exam.Entities.dll
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\bin\Debug\net8.0\Exam.Entities.pdb
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.csproj.AssemblyReference.cache
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.AssemblyInfoInputs.cache
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.AssemblyInfo.cs
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.csproj.CoreCompileInputs.cache
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.dll
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\refint\Exam.Entities.dll
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.pdb
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.genruntimeconfig.cache
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\ref\Exam.Entities.dll

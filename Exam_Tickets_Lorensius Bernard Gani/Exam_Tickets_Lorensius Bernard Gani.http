@@ -1,0 +1,6 @@
+@Exam_Tickets_Lorensius_Bernard_Gani_HostAddress = http://localhost:5202
+
+GET {{Exam_Tickets_Lorensius_Bernard_Gani_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
