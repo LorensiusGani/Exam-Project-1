@@ -220,6 +220,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
             await _context.SaveChangesAsync();
 
             var remainingBookedTicket = await _context.BookTickets
+                 .Where(y => y.BookTicketId == bookTicketID)
                 .Select(y => new BookedTicketDetails
                 {
                     TicketCode = y.TicketCode,
@@ -305,6 +306,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
                 await _context.SaveChangesAsync();
 
                 var remainingBookedTicket = await _context.BookTickets
+                .Where(y => y.BookTicketId == bookTicketID)
                .Select(y => new BookedTicketDetails
                {
                    TicketCode = y.TicketCode,
