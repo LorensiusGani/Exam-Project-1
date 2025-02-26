@@ -37,13 +37,14 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
             return dataBookedTicket;
         }
 
-        public async Task<List<BookedCategoryModel>> GetBookedTicked()
+        public async Task<List<BookedCategoryModel>> GetBookedTicked(int bookedTicketId)
         {
             var bookedTickets = await _context.BookTickets
+                .Where(ticket => ticket.BookTicketId == bookedTicketId)
                 .GroupBy(ticket => ticket.CategoryName)
                 .Select(group => new BookedCategoryModel
                 {
-                    QtyProperty = group.Count(),
+                    QtyProperty = group.Sum(x => x.Qty),
                     CategoryName = group.Key,
                     Tickets = group.Select(ticket => new DetailsBookedModel
                     {
@@ -52,6 +53,12 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
                         EventDate = ticket.EventDate.ToString("dd-MM-yyyy HH:mm:ss")
                     }).ToList()
                 }).ToListAsync();
+            
+            if(!bookedTickets.Any())
+            {
+                return null;
+            }
+
             return bookedTickets;
         }
 

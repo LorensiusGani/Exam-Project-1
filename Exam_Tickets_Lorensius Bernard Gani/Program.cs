@@ -7,6 +7,12 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,6 +31,7 @@ builder.Services.AddTransient<TicketsServices>();
 builder.Services.AddTransient<BookedTicketServices>();
 
 var app = builder.Build();
+app.UseCors("AllowAll");
 
 app.UseExceptionHandler(builder =>
 {

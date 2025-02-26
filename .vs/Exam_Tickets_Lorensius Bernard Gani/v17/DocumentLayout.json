@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|d:\\working\\exam_tickets_lorensius bernard gani\\exam_tickets_lorensius bernard gani\\models\\bookedticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|solutionrelative:exam_tickets_lorensius bernard gani\\models\\bookedticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|d:\\working\\exam_tickets_lorensius bernard gani\\exam_tickets_lorensius bernard gani\\models\\ticketsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|solutionrelative:exam_tickets_lorensius bernard gani\\models\\ticketsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|d:\\working\\exam_tickets_lorensius bernard gani\\exam_tickets_lorensius bernard gani\\controllers\\bookedticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|solutionrelative:exam_tickets_lorensius bernard gani\\controllers\\bookedticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|d:\\working\\exam_tickets_lorensius bernard gani\\exam_tickets_lorensius bernard gani\\services\\bookedticketservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|solutionrelative:exam_tickets_lorensius bernard gani\\services\\bookedticketservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|d:\\working\\exam_tickets_lorensius bernard gani\\exam_tickets_lorensius bernard gani\\services\\ticketsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88872436-5243-4955-BE9A-A3F98560B075}|Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani.csproj|solutionrelative:exam_tickets_lorensius bernard gani\\services\\ticketsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,54 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BookedTicket.cs",
-              "DocumentMoniker": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Models\\BookedTicket.cs",
-              "RelativeDocumentMoniker": "Exam_Tickets_Lorensius Bernard Gani\\Models\\BookedTicket.cs",
-              "ToolTip": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Models\\BookedTicket.cs",
-              "RelativeToolTip": "Exam_Tickets_Lorensius Bernard Gani\\Models\\BookedTicket.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Title": "BookedTicketController.cs",
+              "DocumentMoniker": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Controllers\\BookedTicketController.cs",
+              "RelativeDocumentMoniker": "Exam_Tickets_Lorensius Bernard Gani\\Controllers\\BookedTicketController.cs",
+              "ToolTip": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Controllers\\BookedTicketController.cs",
+              "RelativeToolTip": "Exam_Tickets_Lorensius Bernard Gani\\Controllers\\BookedTicketController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwEsAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:26:59.303Z",
+              "WhenOpened": "2025-02-24T11:26:45.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TicketsModel.cs",
-              "DocumentMoniker": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Models\\TicketsModel.cs",
-              "RelativeDocumentMoniker": "Exam_Tickets_Lorensius Bernard Gani\\Models\\TicketsModel.cs",
-              "ToolTip": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Models\\TicketsModel.cs",
-              "RelativeToolTip": "Exam_Tickets_Lorensius Bernard Gani\\Models\\TicketsModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:26:55.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TicketsServices.cs",
-              "DocumentMoniker": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Services\\TicketsServices.cs",
-              "RelativeDocumentMoniker": "Exam_Tickets_Lorensius Bernard Gani\\Services\\TicketsServices.cs",
-              "ToolTip": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Services\\TicketsServices.cs",
-              "RelativeToolTip": "Exam_Tickets_Lorensius Bernard Gani\\Services\\TicketsServices.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAowE8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T14:23:52.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "BookedTicketServices.cs",
               "DocumentMoniker": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Services\\BookedTicketServices.cs",
               "RelativeDocumentMoniker": "Exam_Tickets_Lorensius Bernard Gani\\Services\\BookedTicketServices.cs",
               "ToolTip": "D:\\Working\\Exam_Tickets_Lorensius Bernard Gani\\Exam_Tickets_Lorensius Bernard Gani\\Services\\BookedTicketServices.cs",
               "RelativeToolTip": "Exam_Tickets_Lorensius Bernard Gani\\Services\\BookedTicketServices.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCYAAAAAAAAA",
+              "ViewState": "AQIAANkAAAAAAAAAAAAAwKwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T07:31:19.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T09:10:52.017Z"
             }
           ]
         }

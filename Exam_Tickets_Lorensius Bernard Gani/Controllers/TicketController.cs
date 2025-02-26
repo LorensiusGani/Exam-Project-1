@@ -83,6 +83,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
         {
             var reports = await _context.GetTickets(categoryName, ticketCode, ticketName, maxPrice,
                 minEventDate, maxEventDate, orderBy, orderState, 1, int.MaxValue);
+
             if (reports == null || reports.Tickets.Count == 0)
             {
                 return BadRequest("No data to generate this report");
@@ -91,7 +92,14 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
             string directory = @"D:\DOWNLOAD DARI CHROME";
 
             var pdfFile = GeneratePDFTicketsReport.GenerateTicketReport(reports.Tickets, directory);
-            return Ok($"File successfully saved at: {pdfFile}");
+            if(!System.IO.File.Exists(pdfFile))
+    {
+                return NotFound("File not found.");
+            }
+
+            var fileBytes = await System.IO.File.ReadAllBytesAsync(pdfFile);
+
+            return File(fileBytes, "application/pdf", "TicketReport.pdf");
 
         }
 

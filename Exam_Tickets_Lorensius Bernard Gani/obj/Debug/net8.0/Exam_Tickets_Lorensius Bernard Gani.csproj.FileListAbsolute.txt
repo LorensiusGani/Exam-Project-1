@@ -94,3 +94,4 @@ D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam_Tickets_Lorensius Bernard Ga
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam_Tickets_Lorensius Bernard Gani\bin\Debug\net8.0\Exam_Tickets_Lorensius Bernard Gani.pdb
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam_Tickets_Lorensius Bernard Gani\obj\Debug\net8.0\Exam_Tickets_Lorensius Bernard Gani.genruntimeconfig.cache
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam_Tickets_Lorensius Bernard Gani\obj\Debug\net8.0\ref\Exam_Tickets_Lorensius Bernard Gani.dll
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam_Tickets_Lorensius Bernard Gani\obj\Debug\net8.0\Exam_Tickets_Lorensius Bernard Gani.sourcelink.json

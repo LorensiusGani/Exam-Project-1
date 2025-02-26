@@ -12,3 +12,4 @@ D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\re
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.pdb
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.genruntimeconfig.cache
 D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\ref\Exam.Entities.dll
+D:\Working\Exam_Tickets_Lorensius Bernard Gani\Exam.Entities\obj\Debug\net8.0\Exam.Entities.sourcelink.json

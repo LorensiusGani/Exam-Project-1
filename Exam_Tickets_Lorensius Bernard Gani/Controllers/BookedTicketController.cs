@@ -22,7 +22,20 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
         [HttpGet("get-booked-ticked/{BookedTicketId}")]
         public async Task<IActionResult> GetBookedTicked(int BookedTicketId)
         {
-            var booked = await _services.GetBookedTicked();
+            var booked = await _services.GetBookedTicked(BookedTicketId);
+            if(booked == null)
+            {
+                var problemDetails = new ProblemDetails
+                {
+                    Status = 404,
+                    Type = "https://httpstatuses.com/404",
+                    Title = "Data tidak ditemukan",
+                    Detail = $"Tidak ada data ditemukan untuk id {BookedTicketId}",
+                    Instance = HttpContext.Request.Path
+                };
+
+                return NotFound(problemDetails);
+            }
             return Ok(booked);
         }
 
@@ -60,7 +73,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
             return Ok(response);
         }
 
-        [HttpDelete("revoke-ticket/{BookedTicketId}/{KodeTicket}/{Qty}.")]
+        [HttpDelete("revoke-ticket/{BookedTicketId}/{KodeTicket}/{Qty}")]
         public async Task<IActionResult> Delete(int BookedTicketId, string KodeTicket, int Qty)
         {
             var response = await _services.Delete(BookedTicketId, KodeTicket,  Qty);
