@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exam_Tickets_Lorensius Bernard Gani")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b19deea3f74fd4b38fb00c2d4485c91b95753bcc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c340ce5dcb1bea64bbeaf20222a1315c3df33d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exam_Tickets_Lorensius Bernard Gani")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exam_Tickets_Lorensius Bernard Gani")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
             _context = context;
         }
 
-        public async Task<TicketsResponseModel> GetTickets(
+        public async Task<TicketsResponseModel<TicketsModel>> GetTickets(
             string? categoryName, string? ticketCode, string? ticketName, int? maxPrice,
             DateTime? minEventDate, DateTime? maxEventDate, string? orderBy, string? orderState,
             int page = 1, int pageSize = 10)
@@ -78,7 +78,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
                  Price = Q.Price
             }).ToListAsync();
 
-            return new TicketsResponseModel
+            return new TicketsResponseModel<TicketsModel>
             {
                 Tickets = dataTicket,
                 TotalTickets = totalTickets

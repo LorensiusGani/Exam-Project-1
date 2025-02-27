@@ -1,8 +1,13 @@
 using Exam.Entities;
 using Exam_Tickets_Lorensius_Bernard_Gani.Services;
+using Exam_Tickets_Lorensius_Bernard_Gani.Validator;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -26,7 +31,21 @@ builder.Services.AddDbContextPool<AccelokaContext>(options =>
     var constring = configuration.GetConnectionString("SQLServerDB");
     options.UseSqlServer(constring);
 });
+
 builder.Services.AddHttpContextAccessor();
+
+
+//MediatR
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddValidatorsFromAssemblyContaining<TicketValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<PostBookedValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<DeleteBookedValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateValidator>();
+
+
+builder.Services.AddFluentValidationAutoValidation();
+
+
 builder.Services.AddTransient<TicketsServices>();
 builder.Services.AddTransient<BookedTicketServices>();
 
