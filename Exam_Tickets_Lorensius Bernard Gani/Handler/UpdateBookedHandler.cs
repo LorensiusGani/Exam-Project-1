@@ -59,13 +59,14 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Handler
                 });
             }
 
-            int oldQuota = bookticket.Qty;
+            int oldQuota = bookedTicketDB.Qty;
             int newQuota = request.Quantity;
             int remainingQuota = oldQuota - newQuota;
 
 
             var ticket = await _context.Tickets
-                .FirstOrDefaultAsync(x => x.TicketCode == request.TicketCode, cancellationToken);
+                .Where(Q => Q.TicketCode == request.TicketCode)
+                .FirstOrDefaultAsync();
 
             if (ticket == null)
             {
@@ -82,7 +83,8 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Handler
             {
                 ticket.Quota -= Math.Abs(remainingQuota);
             }
-            else if (newQuota < oldQuota)
+
+            if (newQuota < oldQuota)
             {
                 ticket.Quota += Math.Abs(remainingQuota);
             }
@@ -90,7 +92,7 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Handler
             bookedTicketDB.TicketCode = request.TicketCode;
             bookedTicketDB.Qty = request.Quantity;
 
-            await _context.SaveChangesAsync(cancellationToken);
+            await _context.SaveChangesAsync();
 
             var remainingBookedTickets = await _context.BookTickets
                 .Where(y => y.BookTicketId == request.BookTicketID)
