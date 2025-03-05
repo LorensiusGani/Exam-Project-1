@@ -3,6 +3,7 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using iText.Kernel.Colors;
 
 namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
 {
@@ -10,51 +11,42 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
     {
         public static string GenerateBookedTicketReport(List<BookedTicket> booked, string ComputerDirectory)
         {
-            if(!Directory.Exists(ComputerDirectory))
+            if (!Directory.Exists(ComputerDirectory))
             {
                 Directory.CreateDirectory(ComputerDirectory);
             }
 
             string path = Path.Combine(ComputerDirectory, "BookedTicket.pdf");
 
-            using(var writer = new PdfWriter(path))
+            using (var writer = new PdfWriter(path))
             {
-                using(var pdf = new PdfDocument(writer))
+                using (var pdf = new PdfDocument(writer))
                 {
                     var doc = new Document(pdf);
+
+                    // Judul Dokumen
                     doc.Add(new Paragraph("Booked Ticket Report")
                         .SetTextAlignment(TextAlignment.CENTER)
-                        .SetFontSize(20));
+                        .SetFontSize(20)
+                        .SetFontColor(ColorConstants.BLUE));
 
-                    var table = new Table(new float[] { 2, 3, 3, 3, 2, 2, 2 });
-                    table.SetWidth(UnitValue.CreatePercentValue(100));
-
-                    table.AddHeaderCell("BookTicketID");
-                    table.AddHeaderCell("TicketCode");
-                    table.AddHeaderCell("CategoryName");
-                    table.AddHeaderCell("TicketName");
-                    table.AddHeaderCell("EventDate");
-                    table.AddHeaderCell("Price");
-                    table.AddHeaderCell("Quantity");
-
-                    foreach(var book in booked)
+                    // Loop untuk setiap tiket
+                    foreach (var book in booked)
                     {
-                        table.AddCell(book.BookTicketId.ToString()).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.TicketCode).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.CategoryName).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.TicketName).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.EventDate.ToString("dd-MM-yyyy HH:mm:ss")).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.Price.ToString
-                                ("C", new System.Globalization.CultureInfo("id-ID"))).SetTextAlignment(TextAlignment.CENTER);
-                        table.AddCell(book.Qty.ToString()).SetTextAlignment(TextAlignment.CENTER);
+                        doc.Add(new Paragraph($"BookTicketID: {book.BookTicketId}"));
+                        doc.Add(new Paragraph($"Ticket Code: {book.TicketCode}"));
+                        doc.Add(new Paragraph($"Category: {book.CategoryName}"));
+                        doc.Add(new Paragraph($"Ticket Name: {book.TicketName}"));
+                        doc.Add(new Paragraph($"Event Date: {book.EventDate:dd-MM-yyyy HH:mm:ss}"));
+                        doc.Add(new Paragraph($"Price: {book.Price.ToString("C", new System.Globalization.CultureInfo("id-ID"))}"));
+                        doc.Add(new Paragraph($"Quantity: {book.Qty}"));
                     }
-                    doc.Add(table);
+
                     doc.Close();
                 }
             }
 
             return path;
-
         }
     }
 }

@@ -33,6 +33,13 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
             _updatevalidator = updatevalidator;
         }
 
+        [HttpGet("get-All-Booked-Ticket")]
+        public async Task<IActionResult> GetBookedTickets()
+        {
+            var result = await _mediator.Send(new GetBookedTicketQuery());
+            return Ok(result);
+        }
+
         [HttpGet("get-booked-ticked/{BookedTicketId}")]
         public async Task<IActionResult> GetBookedTicked(int BookedTicketId)
         {

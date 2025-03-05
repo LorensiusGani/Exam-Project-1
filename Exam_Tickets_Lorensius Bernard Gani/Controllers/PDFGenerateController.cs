@@ -45,16 +45,19 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Controllers
 
         }
 
-        [HttpGet("download-pdf-booked-ticket")]
-        public async Task<IActionResult> DownloadReportBooked()
+        [HttpGet("download-pdf-booked-ticket/{bookedTicketId}")]
+        public async Task<IActionResult> DownloadReportBooked(int bookedTicketId)
         {
-            var report = await _services.Get();
+            var report = await _services.GetBookedTickedID(bookedTicketId);
+
             if (report == null || report.Count == 0)
             {
-                return BadRequest("No data to generate this report");
+                return BadRequest($"No data found for BookedTicketID: {bookedTicketId}");
             }
             string directory = @"D:\DOWNLOAD DARI CHROME";
+
             var pdfFILE = GeneratePDFBookedTicketReport.GenerateBookedTicketReport(report, directory);
+
             return Ok($"File successfully saved at: {pdfFILE}");
         }
 

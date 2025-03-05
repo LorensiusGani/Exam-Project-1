@@ -37,6 +37,24 @@ namespace Exam_Tickets_Lorensius_Bernard_Gani.Services
             return dataBookedTicket;
         }
 
+        public async Task<List<BookedTicket>> GetBookedTickedID(int bookedTicketId)
+        {
+            var dataBookedTicket = await _context.BookTickets
+                .Where(b => b.BookTicketId == bookedTicketId)
+                .Select(Q => new BookedTicket
+                {
+                    BookTicketId = Q.BookTicketId,
+                    TicketCode = Q.TicketCode,
+                    CategoryName = Q.CategoryName,
+                    TicketName = Q.TicketName,
+                    EventDate = Q.EventDate,
+                    Price = Q.Price,
+                    Qty = Q.Qty
+                }).ToListAsync();
+
+            return dataBookedTicket;
+        }
+
         public async Task<List<BookedCategoryModel>> GetBookedTicked(int bookedTicketId)
         {
             var bookedTickets = await _context.BookTickets
